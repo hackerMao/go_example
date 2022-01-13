@@ -66,6 +66,7 @@ func main() {
 
 	for res := range resultChan {
 		fmt.Printf("value: %d sum:%d\n", res.job.value, res.result)
+		fmt.Println("毛毛傻狗！！！")
 	}
 	wg.Wait()
 }
