@@ -14,7 +14,7 @@ func readFile1() {
 		fmt.Printf("failed to open file, error: %s\n", err)
 	}
 	defer file.Close()
-	var buf = [128]byte{}
+	var buf = [256]byte{}
 	for {
 		n, err := file.Read(buf[:])
 		if err == io.EOF {
@@ -63,7 +63,7 @@ func readFileByIOUtil() {
 }
 
 func main() {
-	//readFile1()
-	//readFileByBufIO()
+	// readFile1()
+	// readFileByBufIO()
 	readFileByIOUtil()
 }
